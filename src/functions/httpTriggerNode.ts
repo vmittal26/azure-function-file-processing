@@ -43,11 +43,11 @@ export const  httpTriggerNode = async(request: HttpRequest, context: InvocationC
 
 const readFile = (context:InvocationContext , filesManager:FilesManager)=>{
     try{
-        const outputPath = `${__dirname} + '/result-${context.invocationId}.txt`;
+        const outputPath = `result-${context.invocationId}.txt`;
         let inputPathList = [];
 
          for(let i = 0;i < 10000;i++){
-            inputPathList.push( __dirname + '/sample_file.txt');
+            inputPathList.push( 'sample_file.txt');
          }
 
          filesManager.mergeFiles(inputPathList,outputPath);
@@ -55,7 +55,7 @@ const readFile = (context:InvocationContext , filesManager:FilesManager)=>{
          inputPathList = [];
 
          for(let i = 0;i < 15000;i++){
-            inputPathList.push( __dirname + '/sample_file.txt');
+            inputPathList.push( 'sample_file.txt');
          }
 
          filesManager.mergeFiles(inputPathList,outputPath);
