@@ -46,7 +46,7 @@ const readFile = (context:InvocationContext , filesManager:FilesManager)=>{
         const outputPath = `result-${context.invocationId}.txt`;
         let inputPathList = [];
 
-         for(let i = 0;i < 10000;i++){
+         for(let i = 0;i < 1000;i++){
             inputPathList.push( 'sample_file.txt');
          }
 
@@ -54,7 +54,7 @@ const readFile = (context:InvocationContext , filesManager:FilesManager)=>{
 
          inputPathList = [];
 
-         for(let i = 0;i < 15000;i++){
+         for(let i = 0;i < 1500 ;i++){
             inputPathList.push( 'sample_file.txt');
          }
 
